@@ -23,6 +23,7 @@ before_install:
 
 script:
   - docker run franciscoserrano/metegol-project-test mvn test
+  - mvn jacoco:report
 
 after_success:
   - java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r target/site/jacoco/jacoco.xml

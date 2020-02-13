@@ -12,6 +12,7 @@
 - [ ] Logging Structure (correlation-id)
 - [ ] Configure AWS VPC, Security Groups, etc.
 - [ ] CD: Elastic Beanstalk (Disable Auto-Scaling)
+- [ ] Optimize `.travis.yml`
 - [ ] Connection to database
 - [ ] Migrations Setup
 - [ ] Complete Health Check
