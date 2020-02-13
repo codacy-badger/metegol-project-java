@@ -26,6 +26,7 @@ script:
   - mvn jacoco:report
 
 after_success:
+  - echo $(pwd)
   - java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r target/site/jacoco/jacoco.xml
   - docker build -t franciscoserrano/metegol-project:latest -t franciscoserrano/metegol-project:$SHA .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
