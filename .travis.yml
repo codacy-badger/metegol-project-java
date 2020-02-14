@@ -23,7 +23,7 @@ before_install:
 
 script:
   - docker run franciscoserrano/metegol-project-test mvn test
-  - mvn jacoco:report
+  - mvn jacoco:report-aggregate
 
 after_success:
   - echo $(pwd)
