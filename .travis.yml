@@ -27,7 +27,7 @@ script:
 
 after_success:
   - echo $(pwd)
-  - cd /home/travis/build/francisco-serrano/metegol-project-java/target/site/jacoco
+  - cd /home/travis/build/francisco-serrano/metegol-project-java/target/site
   - ls
   - java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r target/site/jacoco/jacoco.xml
   - docker build -t franciscoserrano/metegol-project:latest -t franciscoserrano/metegol-project:$SHA .
