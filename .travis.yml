@@ -29,7 +29,7 @@ after_success:
   - echo $(pwd)
   - cd /home/travis/build/francisco-serrano/metegol-project-java/target/site/jacoco-aggregate
   - ls
-  - java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r jacoco-aggregate/jacoco.xml
+  - java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r jacoco.xml
   - docker build -t franciscoserrano/metegol-project:latest -t franciscoserrano/metegol-project:$SHA .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push franciscoserrano/metegol-project:latest
