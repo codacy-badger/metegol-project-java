@@ -13,4 +13,4 @@ RUN mvn package
 
 COPY ./src /usr/src/app/src
 
-CMD mvn test && java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r ./target/site/jacoco-aggregate/jacoco.xml
+CMD mvn package && java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r ./target/site/jacoco/jacoco.xml
