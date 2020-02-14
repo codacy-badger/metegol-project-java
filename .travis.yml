@@ -16,6 +16,7 @@ before_cache:
   - rm -rf $HOME/.m2/repository/com/autentia/traviscodacy
 
 before_install:
+  - chmod +x mvnw
   - docker build -t franciscoserrano/metegol-project-test -f ./Dockerfile.test .
 
 script:
